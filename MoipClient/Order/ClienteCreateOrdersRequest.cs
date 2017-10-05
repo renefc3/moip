@@ -1,4 +1,6 @@
-﻿namespace MoipClient
+﻿using System;
+
+namespace MoipClient
 {
     public class ClienteCreateOrdersRequest
     {
@@ -20,7 +22,7 @@
         [Newtonsoft.Json.JsonProperty("email")]
         public string Email { get; set; }
         [Newtonsoft.Json.JsonProperty("birthDate")]
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public PhoneDto Phone { get; set; }
         public DocumentDto TaxDocument { get; set; }
         public AddressDto ShippingAddress { get; set; }

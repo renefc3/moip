@@ -1,4 +1,6 @@
-﻿namespace MoipClient
+﻿using System;
+
+namespace MoipClient
 {
     public class CreateCustomersResponse
     {
@@ -7,7 +9,7 @@
         public string Fullname { get; set; }
         public string Email { get; set; }
         public PhoneDto Phone { get; set; }
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public DocumentDto TaxDocument { get; set; }
         public AddressDto ShippingAddress { get; set; }
 
