@@ -117,7 +117,7 @@ namespace MoipClientTests
             req.BirthDate = DateTime.Today.AddYears(-30);
             req.Email = "teste_cliente@moipNet4.com";
             req.Fullname = "Teste moip client 4";
-            req.OwnId = "3";
+            req.OwnId = "MMAMA";
             req.Phone = new PhoneDto()
             {
                 AreaCode = 11,

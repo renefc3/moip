@@ -123,7 +123,45 @@ namespace MoipClient
 
     }
 
-   
+
+
+    public class FundingInstrumentBoleto : FundingInstrumentCreatePaymentRequest
+    {
+        [Newtonsoft.Json.JsonProperty("method")]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public override MethodType Method { get { return MethodType.BOLETO; } }
+        [Newtonsoft.Json.JsonProperty("boleto")]
+        public BoletoAddBoletoRequest Boleto { get; set; }
+    }
+
+    public class BoletoAddBoletoRequest
+    {
+
+        
+        [Newtonsoft.Json.JsonProperty("expirationDate")]
+        public DateTime ExpirationDate { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("instructionLines")]
+        public InstructionLinesBoletoAddBoletoRequest InstructionLines { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("logoUri")]
+        public string LogoUri { get; set; }
+        
+    }
+
+    public class InstructionLinesBoletoAddBoletoRequest
+    {
+        [Newtonsoft.Json.JsonProperty("first")]
+        public string First { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("second")]
+        public string Second { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("third")]
+        public string Third { get; set; }
+    }
+
+
 
     public class FundingInstrumentCreditCard : FundingInstrumentCreatePaymentRequest
     {
